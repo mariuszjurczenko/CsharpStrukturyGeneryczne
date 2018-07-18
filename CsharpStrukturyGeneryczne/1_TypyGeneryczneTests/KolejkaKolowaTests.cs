@@ -29,8 +29,8 @@ namespace _1_TypyGeneryczneTests
         public void PierwszyWchodziPierwszyWychodzi() 
         {
             var kolejka = new KolejkaKolowa(pojemnosc: 3);
-            var wartosc1 = "4.6";
-            var wartosc2 = "3.7";
+            var wartosc1 = 4.6;
+            var wartosc2 = 3.7;
 
             kolejka.Zapisz(wartosc1);
             kolejka.Zapisz(wartosc2);
