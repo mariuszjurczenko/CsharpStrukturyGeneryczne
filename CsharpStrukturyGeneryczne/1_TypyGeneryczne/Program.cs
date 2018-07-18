@@ -26,7 +26,8 @@ namespace _1_TypyGeneryczne
             while (!kolejka.JestPusty)
             {
                 Console.WriteLine("\t\t" + kolejka.Czytaj());
-            }
+            } 
+
         }
     }
 }
