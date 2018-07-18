@@ -3,7 +3,7 @@
     public class KolejkaKolowa
     {
         private double[] bufor;
-        private int pocztekBufora;
+        private int poczatekBufora;
         private int koniecBufora;
 
         public KolejkaKolowa() : this(pojemnosc: 5)
@@ -13,7 +13,7 @@
         public KolejkaKolowa(int pojemnosc)
         {
             bufor = new double[pojemnosc + 1];
-            pocztekBufora = 0;
+            poczatekBufora = 0;
             koniecBufora = 0;
         }
 
@@ -22,14 +22,14 @@
             bufor[koniecBufora] = wartosc;
             koniecBufora = (koniecBufora + 1) % bufor.Length;
 
-            if (koniecBufora == pocztekBufora)
-                pocztekBufora = (pocztekBufora + 1) % bufor.Length;
+            if (koniecBufora == poczatekBufora)
+                poczatekBufora = (poczatekBufora + 1) % bufor.Length;
         }
 
         public double Czytaj()
         {
-            var wynik = bufor[pocztekBufora];
-            pocztekBufora = (pocztekBufora + 1) % bufor.Length;
+            var wynik = bufor[poczatekBufora];
+            poczatekBufora = (poczatekBufora + 1) % bufor.Length;
             return wynik;
         }
 
@@ -45,7 +45,7 @@
         {
             get
             {
-                return koniecBufora == pocztekBufora;
+                return koniecBufora == poczatekBufora;
             }
         }
 
@@ -53,7 +53,7 @@
         {
             get
             {
-                return (koniecBufora + 1) % bufor.Length == pocztekBufora;
+                return (koniecBufora + 1) % bufor.Length == poczatekBufora;
             }
         }
     }
