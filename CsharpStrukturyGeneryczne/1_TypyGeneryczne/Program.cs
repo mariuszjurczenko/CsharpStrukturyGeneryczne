@@ -6,30 +6,53 @@ namespace _1_TypyGeneryczne
     {
         static void Main(string[] args)
         {
-            var kolejka = new KolejkaKolowa(pojemnosc: 3);
+            var kolejka = new KolejkaKolowa<double>(pojemnosc: 3);
+            var kolejkaInt = new KolejkaKolowa<int>();
+            var kolejkaString = new KolejkaKolowa<string>(1000);
 
-            while (true)
+            var kolejkaOsob = new KolejkaKolowa<Osoba>();
+            kolejkaOsob.Zapisz(new Osoba { Imie = "Marcin", Nazwisko = "Nowak" });
+            kolejkaOsob.Zapisz(new Osoba { Imie = "Tomek", Nazwisko = "Nowak" });
+            kolejkaOsob.Zapisz(new Osoba { Imie = "Kacpek", Nazwisko = "Nowak" });
+            kolejkaOsob.Zapisz(new Osoba { Imie = "Marcin", Nazwisko = "Nowak" });
+      
+
+
+            while (!kolejkaOsob.JestPusty)
             {
-                var wartosc = 0.0;
-                var wartoscWejsciowa = Console.ReadLine();
-
-                if (double.TryParse(wartoscWejsciowa, out wartosc))
-                {
-                    kolejka.Zapisz(wartosc);
-                    continue;
-                }
-                break;
+                var wynik = kolejkaOsob.Czytaj().Imie;
+                Console.WriteLine(wynik);
             }
 
-            var suma = 0.0;
-            Console.WriteLine("W naszej kolejce jest :");
+            //while (true)
+            //{
+            //    var wartosc = 0.0;
+            //    var wartoscWejsciowa = Console.ReadLine();
 
-            while (!kolejka.JestPusty)
-            {
-                suma += kolejka.Czytaj();
-            }
-            Console.WriteLine(suma);
+            //    if (double.TryParse(wartoscWejsciowa, out wartosc))
+            //    {
+            //        kolejka.Zapisz(wartosc);
+            //        continue;
+            //    }
+            //    break;
+            //}
+
+            //var suma = 0.0;
+            //Console.WriteLine("W naszej kolejce jest :");
+
+            //while (!kolejka.JestPusty)
+            //{
+            //    suma += kolejka.Czytaj();
+            //}
+            //Console.WriteLine(suma);
 
         }
+    }
+
+    public class Osoba
+    {
+        public string Imie { get; set; }
+
+        public string Nazwisko { get; set; }
     }
 }
