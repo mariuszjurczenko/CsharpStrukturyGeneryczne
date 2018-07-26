@@ -13,8 +13,6 @@ namespace _2_KolekcjeGeneryczne
             //LinkedList();
             //LinkedList2();
             //Dictionary();
-
-
         }
 
         private static void Dictionary()
@@ -23,14 +21,12 @@ namespace _2_KolekcjeGeneryczne
             pracownicy.Add("Ksiegowosc", new List<Pracownik>() { new Pracownik { Nazwisko = "Nowak" },
                                                                  new Pracownik { Nazwisko = "Kowal" },
                                                                  new Pracownik { Nazwisko = "Kaczor" } });
-
             //...
 
             pracownicy["Ksiegowosc"].Add(new Pracownik { Nazwisko = "Nowak" });
 
             pracownicy.Add("Informatyka", new List<Pracownik>() { new Pracownik { Nazwisko = "Kowalski" },
                                                                   new Pracownik { Nazwisko = "Bogacki" }  });
-
             foreach (var item in pracownicy)
             {
                 Console.WriteLine("Dział : " + item.Key);
