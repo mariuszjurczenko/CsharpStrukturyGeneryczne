@@ -15,7 +15,30 @@ namespace _2_KolekcjeGeneryczne
             //Dictionary();
             //SortedDictionary();
             //SortedList();
+            //SortedSet();
 
+            var pracownicy = new Dictionary<string, List<Pracownik>>();
+
+            pracownicy.Add("Ksiegowosc", new List<Pracownik>());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private static void SortedSet()
+        {
             var set = new SortedSet<int>();
             set.Add(8);
             set.Add(6);
