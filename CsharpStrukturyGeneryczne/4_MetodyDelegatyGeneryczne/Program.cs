@@ -10,7 +10,9 @@ namespace _4_MetodyDelegatyGeneryczne
 
             WprowadzanieDanych(kolejka);
 
-            foreach (var item in kolejka)
+            var elementyJakoInt = kolejka.ElementJako<DateTime>();
+
+            foreach (var item in elementyJakoInt)
             {
                 Console.WriteLine(item);
             }
