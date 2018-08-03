@@ -6,13 +6,13 @@ namespace _4_MetodyDelegatyGeneryczne
     {
         static void Main(string[] args)
         {
-            Action<double> drukuj = x => Console.WriteLine(x);
-
-            Func<double, double> potegowenia = d => d * d;
+            Action<bool> drukuj = x => Console.WriteLine(x);
+            Func<double, double> potegowanie = d => d * d;
             Func<double, double, double> dodaj = (x, y) => x + y;
+            Predicate<double> jestMniejszeOdSto = d => d < 100;
 
-            drukuj(potegowenia(5));
-            drukuj(dodaj(10, 20));
+            drukuj(jestMniejszeOdSto(potegowanie(dodaj(6, 8))));
+
 
 
             var kolejka = new KolejkaKolowa<double>();
