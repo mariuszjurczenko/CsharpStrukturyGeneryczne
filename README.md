@@ -1,4 +1,5 @@
-# CsharpStrukturyGeneryczne   -  mariuszjurczenko@dev-hobby.pl 
+# CsharpStrukturyGeneryczne   
+-  mariuszjurczenko@dev-hobby.pl 
 
 Kurs C# - typy generyczne
 Dowiedz się jak tworzyć bezpieczne i wydajne struktury danych za pomocą typów generycznych.
